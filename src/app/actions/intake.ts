@@ -82,13 +82,24 @@ ${notes || '—'}
   const fromEmail = process.env.INTAKE_EMAIL_FROM ?? 'intake@puzzlecore.co'
 
   try {
-    await resend.emails.send({
+    // ── 1. Notify coach ───────────────────────────────────────────────────
+    const result = await resend.emails.send({
       from:    fromEmail,
       to:      toEmail,
       replyTo: email,
       subject: `New PuzzleCore Intake — ${name}`,
       text:    body,
     })
+
+    console.log('[Intake] Resend result:', JSON.stringify(result))
+
+    if (result.error) {
+      console.error('[Intake] Resend rejected:', result.error)
+      return {
+        status: 'error',
+        message: 'Something went wrong sending your form. Please try again.',
+      }
+    }
 
     return {
       status: 'success',
