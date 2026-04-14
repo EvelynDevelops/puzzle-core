@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0c0c0b;
+  --foreground: #f0ede8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Puzzle Core brand tokens */
+  --color-pc-bg:        #0c0c0b;
+  --color-pc-surface:   #141413;
+  --color-pc-surface-2: #1c1c1b;
+  --color-pc-border:    #222220;
+  --color-pc-gold:      #c8a97e;
+  --color-pc-gold-lt:   #dfc49a;
+  --color-pc-white:     #f0ede8;
+  --color-pc-off:       #d4d1cc;
+  --color-pc-muted:     #5c5c59;
+  --color-pc-light-bg:  #f5f3ef;
+  --color-pc-light-card:#ffffff;
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.7s ease both;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #c8a97e;
+  color: #0c0c0b;
+}
+
+html {
+  scroll-behavior: smooth;
 }
