@@ -52,7 +52,7 @@ function LogoMark() {
       <div className="absolute top-0 left-0 w-[9px] h-[9px] border border-[#c8a97e]" />
       <div className="absolute top-0 right-0 w-[9px] h-[9px] border border-[#c8a97e]" />
       <div className="absolute bottom-0 left-0 w-[9px] h-[9px] border border-[#c8a97e]" />
-      <div className="absolute bottom-[1px] right-[1px] w-[9px] h-[9px] bg-[#c8a97e]" />
+      <div className="absolute bottom-0 right-0 w-[9px] h-[9px] bg-[#c8a97e]" />
     </div>
   );
 }
