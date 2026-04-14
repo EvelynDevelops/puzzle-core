@@ -49,14 +49,9 @@ export default function WhoItsFor() {
               key={item.title}
               className="bg-white p-8 md:p-10 flex flex-col gap-4 group hover:shadow-sm transition-shadow"
             >
-              <div className="flex items-start justify-between">
-                <h3 className="font-bold text-[#0c0c0b] text-xl md:text-2xl leading-snug">
-                  {item.title}
-                </h3>
-                <span className="text-[#c8a97e] text-lg mt-0.5 opacity-60 group-hover:opacity-100 transition-opacity">
-                  ↗
-                </span>
-              </div>
+              <h3 className="font-bold text-[#0c0c0b] text-xl md:text-2xl leading-snug">
+                {item.title}
+              </h3>
               <p className="text-[#5c5c59] text-sm md:text-base leading-[1.8]">
                 {item.description}
               </p>

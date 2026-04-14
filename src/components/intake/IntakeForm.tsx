@@ -139,7 +139,7 @@ export function IntakeForm() {
       <section className="flex flex-col gap-7">
         <SectionHeader number="02" title="Training Background" />
 
-        <FormField label="Have you trained with a partner or in a group before?">
+        <FormField label="Have you trained with a coach or in a group before?">
           <RadioGroup name="experience" options={EXPERIENCE_OPTIONS} />
         </FormField>
 
