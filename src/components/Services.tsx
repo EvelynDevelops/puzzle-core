@@ -60,21 +60,19 @@ export default function Services() {
             <div
               key={service.number}
               className="group flex flex-col md:flex-row md:items-center gap-4 md:gap-12 py-8 md:py-10
-                         hover:bg-[#141413] -mx-4 px-4 md:-mx-8 md:px-8 lg:-mx-12 lg:px-12
-                         transition-colors duration-200 rounded-none"
+                         hover:bg-[#1c1c1b] border-l-2 border-l-transparent hover:border-l-[#c8a97e]
+                         -mx-4 px-4 md:-mx-8 md:px-8 lg:-mx-12 lg:px-12
+                         transition-all duration-200"
             >
               <span className="text-[#c8a97e] text-[11px] font-mono tracking-[0.2em] w-8 shrink-0">
                 {service.number}
               </span>
-              <h3 className="text-[#f0ede8] font-semibold text-xl md:text-2xl md:w-72 shrink-0 leading-snug">
+              <h3 className="text-[#f0ede8] font-semibold text-xl md:text-2xl md:w-72 shrink-0 leading-snug group-hover:text-white transition-colors duration-200">
                 {service.title}
               </h3>
-              <p className="text-[#a8a8a5] text-sm md:text-base leading-relaxed flex-1">
+              <p className="text-[#a8a8a5] text-sm md:text-base leading-relaxed flex-1 group-hover:text-[#c8c8c5] transition-colors duration-200">
                 {service.description}
               </p>
-              <span className="text-[#c8a97e] text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 shrink-0 hidden md:block">
-                →
-              </span>
             </div>
           ))}
         </div>

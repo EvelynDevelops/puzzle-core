@@ -39,21 +39,20 @@ export default function About() {
 
           {/* Visual: 2×2 puzzle grid */}
           <div className="flex items-center justify-center lg:justify-end">
-            <div className="grid grid-cols-2 gap-4 w-full max-w-[360px]">
+            <div className="group grid grid-cols-2 gap-4 w-full max-w-[360px]">
               {PIECES.map((piece) => (
                 <div
                   key={piece.label}
-                  className={`aspect-square flex items-end p-6 md:p-8 transition-colors ${
-                    piece.filled
-                      ? "bg-[#0c0c0b]"
-                      : "bg-[#0c0c0b]/[0.07]"
-                  }`}
+                  className={`
+                    aspect-square flex items-end p-6 md:p-8 transition-colors duration-200 cursor-default
+                    hover:bg-[#0c0c0b] hover:text-[#c8a97e]
+                    ${piece.filled
+                      ? "bg-[#0c0c0b] text-[#c8a97e] group-hover:bg-[#0c0c0b]/[0.07] group-hover:text-[#0c0c0b] hover:!bg-[#0c0c0b] hover:!text-[#c8a97e]"
+                      : "bg-[#0c0c0b]/[0.07] text-[#0c0c0b]"
+                    }
+                  `}
                 >
-                  <span
-                    className={`font-semibold text-sm tracking-wide ${
-                      piece.filled ? "text-[#c8a97e]" : "text-[#0c0c0b]"
-                    }`}
-                  >
+                  <span className="font-semibold text-sm tracking-wide">
                     {piece.label}
                   </span>
                 </div>

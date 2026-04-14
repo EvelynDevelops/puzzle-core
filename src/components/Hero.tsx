@@ -59,17 +59,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll hint */}
-      <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-25 animate-fade-in"
-        style={{ animationDelay: "900ms" }}
-        aria-hidden="true"
-      >
-        <span className="text-[#f0ede8] text-[9px] tracking-[0.28em] uppercase">
-          Scroll
-        </span>
-        <div className="w-px h-10 bg-gradient-to-b from-[#f0ede8] to-transparent" />
-      </div>
     </section>
   );
 }
