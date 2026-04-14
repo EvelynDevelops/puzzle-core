@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const NAV_LINKS = [
@@ -13,6 +14,9 @@ const NAV_LINKS = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const navHref = (anchor: string) => (isHome ? anchor : `/${anchor}`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 48);
@@ -42,8 +46,8 @@ export default function Nav() {
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
-              href={link.href}
-              className="text-[#5c5c59] hover:text-[#f0ede8] text-sm transition-colors duration-200 tracking-wide"
+              href={navHref(link.href)}
+              className="text-[#a8a8a5] hover:text-[#f0ede8] text-sm transition-colors duration-200 tracking-wide"
             >
               {link.label}
             </a>
@@ -52,7 +56,7 @@ export default function Nav() {
 
         {/* Desktop CTA */}
         <a
-          href="#contact"
+          href={navHref("#contact")}
           className="hidden md:inline-flex items-center h-10 px-6 bg-[#c8a97e] text-[#0c0c0b] text-xs font-bold tracking-[0.12em] uppercase hover:bg-[#dfc49a] transition-colors duration-200"
         >
           Book a Call
@@ -92,7 +96,7 @@ export default function Nav() {
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={navHref(link.href)}
               onClick={() => setMenuOpen(false)}
               className="text-[#f0ede8] text-base font-medium"
             >
@@ -100,7 +104,7 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#contact"
+            href={navHref("#contact")}
             onClick={() => setMenuOpen(false)}
             className="inline-flex items-center justify-center h-12 px-6 bg-[#c8a97e] text-[#0c0c0b] text-xs font-bold tracking-[0.12em] uppercase mt-2"
           >

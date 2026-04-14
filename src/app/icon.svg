@@ -1,0 +1,11 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#0c0c0b"/>
+  <!-- Top-left (outlined) -->
+  <rect x="3" y="3" width="12" height="12" fill="none" stroke="#c8a97e" stroke-width="1.5"/>
+  <!-- Top-right (outlined) -->
+  <rect x="17" y="3" width="12" height="12" fill="none" stroke="#c8a97e" stroke-width="1.5"/>
+  <!-- Bottom-left (outlined) -->
+  <rect x="3" y="17" width="12" height="12" fill="none" stroke="#c8a97e" stroke-width="1.5"/>
+  <!-- Bottom-right (filled gold) — same stroke so visual size matches the others -->
+  <rect x="17" y="17" width="12" height="12" fill="#c8a97e" stroke="#c8a97e" stroke-width="1.5"/>
+</svg>

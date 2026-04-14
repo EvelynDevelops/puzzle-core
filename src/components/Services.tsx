@@ -1,7 +1,7 @@
 const SERVICES = [
   {
     number: "01",
-    title: "1:1 Personal Training",
+    title: "1 on 1 Personal Training",
     description:
       "In-person sessions built entirely around your goals, your body, and your schedule. Maximum precision, zero wasted effort.",
   },
@@ -48,7 +48,7 @@ export default function Services() {
               Services
             </h2>
           </div>
-          <p className="text-[#5c5c59] max-w-sm text-base leading-relaxed md:text-right">
+          <p className="text-[#a8a8a5] max-w-sm text-base leading-relaxed md:text-right">
             Every service is built on the same foundation — understand what you
             need, then build the system to get you there.
           </p>
@@ -69,7 +69,7 @@ export default function Services() {
               <h3 className="text-[#f0ede8] font-semibold text-xl md:text-2xl md:w-72 shrink-0 leading-snug">
                 {service.title}
               </h3>
-              <p className="text-[#5c5c59] text-sm md:text-base leading-relaxed flex-1">
+              <p className="text-[#a8a8a5] text-sm md:text-base leading-relaxed flex-1">
                 {service.description}
               </p>
               <span className="text-[#c8a97e] text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 shrink-0 hidden md:block">

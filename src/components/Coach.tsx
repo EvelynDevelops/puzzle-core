@@ -1,5 +1,5 @@
 const STATS = [
-  { value: "8+",   label: "Years Experience" },
+  { value: "10+",  label: "Years Experience" },
   { value: "200+", label: "Clients Trained" },
   { value: "CSCS", label: "Certified" },
 ] as const;
@@ -15,7 +15,7 @@ export default function Coach() {
           {/* Left: label + headline */}
           <div>
             <p className="text-[#c8a97e] text-[11px] font-semibold tracking-[0.28em] uppercase mb-6">
-              The Coach
+              The Coaches
             </p>
             <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-bold tracking-[-0.025em] text-[#f0ede8] leading-[1.08]">
               Precision Over<br />Popularity.
@@ -28,7 +28,7 @@ export default function Coach() {
                   <p className="text-[#f0ede8] text-3xl font-bold tracking-tight">
                     {stat.value}
                   </p>
-                  <p className="text-[#5c5c59] text-xs mt-1.5 tracking-wide">
+                  <p className="text-[#a8a8a5] text-xs mt-1.5 tracking-wide">
                     {stat.label}
                   </p>
                 </div>
@@ -37,20 +37,20 @@ export default function Coach() {
           </div>
 
           {/* Right: bio */}
-          <div className="space-y-5 text-[#5c5c59] text-base md:text-[17px] leading-[1.8]">
+          <div className="space-y-5 text-[#a8a8a5] text-base md:text-[17px] leading-[1.8]">
             <p>
-              I built Puzzle Core because I kept seeing the same pattern:
+              We built Puzzle Core because we kept seeing the same pattern:
               smart, motivated people training hard but getting nowhere —
               because they were missing pieces they didn&apos;t know about.
             </p>
             <p>
               With a background in strength and conditioning and years of
               working with clients across every level — from first-timers to
-              competitive athletes — I&apos;ve developed a system that accounts for
+              competitive athletes — we&apos;ve developed a system that accounts for
               the full picture.
             </p>
             <p>
-              My approach is evidence-based, methodical, and deeply
+              Our approach is evidence-based, methodical, and deeply
               individual. No templates. No trends. Just a complete programme
               built specifically around you.
             </p>

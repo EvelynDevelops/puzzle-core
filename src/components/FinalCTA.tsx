@@ -14,9 +14,9 @@ export default function FinalCTA() {
           Ready to put the<br />pieces together?
         </h2>
 
-        <p className="text-[#5c5c59] text-lg md:text-xl max-w-xl mx-auto leading-[1.75] mb-14">
-          Every client starts with a free consultation. We&apos;ll map your missing
-          pieces and build a plan from there. No obligation.
+        <p className="text-[#a8a8a5] text-lg md:text-xl max-w-xl mx-auto leading-[1.75] mb-14">
+          Every client starts with a free consultation. We&apos;ll map out your
+          needs and build the complete picture. No obligation.
         </p>
 
         <a

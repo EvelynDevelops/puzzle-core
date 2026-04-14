@@ -19,25 +19,23 @@ const GOAL_OPTIONS = [
 ] as const
 
 const EXPERIENCE_OPTIONS = [
-  { value: 'Yes – personal trainer', label: 'Yes – personal trainer' },
-  { value: 'Yes – coach',            label: 'Yes – coach' },
-  { value: 'Yes – physio',           label: 'Yes – physio' },
-  { value: 'No',                     label: 'No' },
+  { value: 'Yes', label: 'Yes' },
+  { value: 'No',  label: 'No' },
 ] as const
 
 const TIME_OPTIONS = [
-  { value: '1–2 hours',    label: '1–2 hours' },
-  { value: '2–3 hours',    label: '2–3 hours' },
-  { value: '3–5 hours',    label: '3–5 hours' },
-  { value: '5+ hours',     label: '5+ hours' },
-  { value: 'Not sure yet', label: 'Not sure yet' },
+  { value: '1 session per week',  label: '1x per week' },
+  { value: '2 sessions per week', label: '2x per week' },
+  { value: '3 sessions per week', label: '3x per week' },
+  { value: '4 sessions per week', label: '4x per week' },
+  { value: '5+ sessions per week', label: '5x or more per week' },
 ] as const
 
 const LEVEL_OPTIONS = [
-  { value: 'Beginner',                label: 'Beginner' },
-  { value: 'Intermediate',            label: 'Intermediate' },
-  { value: 'Advanced',                label: 'Advanced' },
-  { value: 'Returning after time off', label: 'Returning after time off' },
+  { value: 'Less than 1 year', label: 'Less than 1 year' },
+  { value: '1–3 years',        label: '1–3 years' },
+  { value: '3–7 years',        label: '3–7 years' },
+  { value: '7+ years',         label: '7+ years' },
 ] as const
 
 const INJURY_OPTIONS = [
@@ -141,15 +139,15 @@ export function IntakeForm() {
       <section className="flex flex-col gap-7">
         <SectionHeader number="02" title="Training Background" />
 
-        <FormField label="Have you worked with a trainer, coach, or physio before?">
+        <FormField label="Have you trained with a partner or in a group before?">
           <RadioGroup name="experience" options={EXPERIENCE_OPTIONS} />
         </FormField>
 
-        <FormField label="How much time can you commit each week?">
+        <FormField label="Each session is approximately 1–2 hours. How many times per week can you train?">
           <RadioGroup name="weeklyTime" options={TIME_OPTIONS} />
         </FormField>
 
-        <FormField label="What is your current training level?">
+        <FormField label="How many years of weightlifting experience do you have?">
           <RadioGroup name="trainingLevel" options={LEVEL_OPTIONS} />
         </FormField>
       </section>
@@ -203,6 +201,20 @@ export function IntakeForm() {
           hint="Select all that apply."
         >
           <CheckboxGroup name="communication" options={COMMUNICATION_OPTIONS} />
+        </FormField>
+
+        <FormField
+          label="Contact details"
+          htmlFor="communicationDetail"
+          hint="E.g. WhatsApp +61 400 000 000"
+        >
+          <input
+            id="communicationDetail"
+            name="communicationDetail"
+            type="text"
+            placeholder="E.g. WhatsApp +61 400 000 000"
+            className={inputClass}
+          />
         </FormField>
       </section>
 
@@ -286,7 +298,7 @@ export function IntakeForm() {
         </button>
 
         <p className="text-xs text-[#5c5c59] leading-relaxed">
-          We review every submission personally and reply within 24–48 hours.
+          We review every submission personally and reply within 24 hours.
         </p>
       </div>
     </form>

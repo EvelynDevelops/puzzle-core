@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="text-[#5c5c59] text-lg md:text-xl leading-[1.75] max-w-[480px] mb-12 animate-fade-up"
+            className="text-[#a8a8a5] text-lg md:text-xl leading-[1.75] max-w-[480px] mb-12 animate-fade-up"
             style={{ animationDelay: "280ms" }}
           >
             Puzzle Core is precision personal training — built around

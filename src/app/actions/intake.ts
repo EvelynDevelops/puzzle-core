@@ -23,7 +23,8 @@ export async function submitIntake(
   const injuryTime     = (formData.get('injuryTime')    as string | null) ?? ''
   const injuryStatus   = (formData.get('injuryStatus')  as string | null)?.trim() ?? ''
   const support        = (formData.get('support')       as string | null) ?? ''
-  const communication  = formData.getAll('communication').join(', ')
+  const communication       = formData.getAll('communication').join(', ')
+  const communicationDetail = (formData.get('communicationDetail') as string | null)?.trim() ?? ''
   const notes          = (formData.get('notes')         as string | null)?.trim() ?? ''
 
   // ── Validate required fields ──────────────────────────────────────────────
@@ -60,6 +61,7 @@ ${injuryStatus || '—'}
 ─── SECTION 4 — COMMUNICATION PREFERENCES ───────────────
 Support preference:  ${support || '—'}
 Communication:       ${communication || '—'}
+Contact details:     ${communicationDetail || '—'}
 
 ─── NOTES ───────────────────────────────────────────────
 ${notes || '—'}

@@ -42,7 +42,7 @@ export default function Philosophy() {
               The Four Pillars
             </h2>
           </div>
-          <p className="text-[#5c5c59] max-w-sm text-base leading-relaxed md:text-right">
+          <p className="text-[#a8a8a5] max-w-sm text-base leading-relaxed md:text-right">
             Every programme is built on this framework. The pillars are not
             sequential — they work together, always.
           </p>
@@ -64,7 +64,7 @@ export default function Philosophy() {
               <h3 className="text-[#f0ede8] font-bold text-2xl md:text-3xl mb-5 tracking-tight">
                 {pillar.name}
               </h3>
-              <p className="text-[#5c5c59] text-sm leading-[1.85] mt-auto">
+              <p className="text-[#a8a8a5] text-sm leading-[1.85] mt-auto">
                 {pillar.description}
               </p>
             </div>
